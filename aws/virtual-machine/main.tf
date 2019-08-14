@@ -1,4 +1,6 @@
 provider "aws" {
+  secret_key = "${var.secret_key}"
+  access_key = "${var.access_key}"
   region = "${var.region}"
 }
 
@@ -20,6 +22,7 @@ resource "aws_instance" "terraform-test-instance" {
   instance_type   = "${var.instance_type}"
 
   tags = {
-    Name = "test-instance"
+    Name = "test-instance-ape"
+    timestamp = "${timestamp()}"
   }
 }
