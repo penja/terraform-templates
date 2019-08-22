@@ -17,7 +17,7 @@ data "aws_ami" "ubuntu" {
   owners = ["099720109477"]
 }
 
-resource "aws_instance" "terraform-test-instance" {
+resource "aws_instance" "terraform-test-instance-a" {
   ami             = "${data.aws_ami.ubuntu.id}"
   instance_type   = "t2.nano"
 
