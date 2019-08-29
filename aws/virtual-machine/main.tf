@@ -1,7 +1,3 @@
-provider "aws" {
-  access_key = "${var.access_key}"
-}
-
 data "aws_ami" "ubuntu" {
   most_recent = false
   filter {
