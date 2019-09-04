@@ -5,7 +5,7 @@ data "aws_ami" "ubuntu11" {
     values = ["ubuntu/images/hvm-ssd/ubuntu-trusty-14.04-amd64-server-*"]
   }
   filter {
-    name   = "virtualization-type"
+    name   = "virtualization-type1"
     values = ["hvm"]
   }
   owners = ["099720109477"]
