@@ -17,6 +17,7 @@ data "aws_ami" "ubuntu" {
 
 resource "aws_instance" "terraform-test-instance-ape22" {
   ami             = "${data.aws_ami.ubuntu.id}"
+  count = 2
   instance_type   = "t2.nano"
 
   tags = {
